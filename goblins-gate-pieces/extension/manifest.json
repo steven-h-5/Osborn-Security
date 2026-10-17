@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Goblin's Gate overlay (hackathon demo)",
+  "version": "0.1.0",
+  "description": "Draws a fictional goblin CAPTCHA over the page. Reads nothing, stores nothing, sends nothing.",
+  "content_scripts": [{
+    "matches": ["*://*.instructure.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["src/*", "assets/*"],
+    "matches": ["*://*.instructure.com/*"]
+  }]
+}
